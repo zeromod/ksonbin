@@ -1,2 +1,2 @@
 # ksonbin
-kotlin wrapper for jsonbin.io
+kotlin wrapper for [jsonbin.io](jsonbin.io)
