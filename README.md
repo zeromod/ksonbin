@@ -1,7 +1,7 @@
 # ksonbin
 ***Ksonbin*** is a kotlin wrapper for [jsonbin.io](https://jsonbin.io) *(A free JSON storage and JSON hosting service)*
 
-Ksonbin uses [kotlin coroutines ](https://kotlinlang.org/docs/reference/coroutines-overview.html) for asynchronous network calls, thanks to [Retrofit](https://square.github.io/retrofit/)
+Made with [ktor](https://ktor.io/) for light dependencies and 100% kotlin :heart:
 
 ## Usage
 

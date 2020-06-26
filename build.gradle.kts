@@ -1,26 +1,24 @@
 plugins {
     kotlin("jvm") version "1.3.72"
     id("maven-publish")
+    kotlin("plugin.serialization") version "1.3.72"
 }
 
 group = "in.zeromod"
 version = "1.0"
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
-    val retrofit = "2.9.0"
-    implementation("com.squareup.retrofit2:retrofit:${retrofit}")
-    implementation("com.squareup.retrofit2:converter-moshi:${retrofit}")
-
-    val okHttp = "4.7.2"
-    implementation("com.squareup.okhttp3:okhttp:$okHttp")
-    implementation("com.squareup.okhttp3:okhttp-urlconnection:$okHttp")
-    implementation("com.squareup.okhttp3:logging-interceptor:$okHttp")
+    val ktor = "1.3.2"
+    api("io.ktor:ktor-client-cio:$ktor")
+    api("io.ktor:ktor-client-json-jvm:$ktor")
+    api("io.ktor:ktor-client-serialization-jvm:$ktor")
 }
 publishing {
     publications {
