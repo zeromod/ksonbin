@@ -2,6 +2,7 @@ plugins {
     kotlin("jvm") version "1.3.72"
     id("maven-publish")
     kotlin("plugin.serialization") version "1.3.72"
+    id("org.jetbrains.dokka") version "0.10.1"
 }
 
 group = "in.zeromod"
@@ -38,7 +39,9 @@ tasks {
     }
 }
 
-
-task("run") {
-
+tasks {
+    val dokka by getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
+        outputFormat = "gfm"
+        outputDirectory = "$rootDir/doc"
+    }
 }
