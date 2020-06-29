@@ -12,7 +12,7 @@ Made with [ktor](https://ktor.io/) for light dependencies and 100% kotlin :heart
 Initialisation that needs run only one time 
 
 ```kotlin
-Ksonbin.init(key = "YOUR_KEY_HERE")
+Ksonbin.init(secretKey = "YOUR_KEY_HERE")
 ```
 
 > you can grab a key from [jsonbin-keys](https://jsonbin.io/api-keys)
@@ -24,35 +24,88 @@ Ksonbin.init(key = "YOUR_KEY_HERE")
 ### BIN
 #### Create
 
-Using the CREATE API, you can Create Public and Private bins.
-
 ```kotlin
-Ksonbin.Bin.create(data)
+Ksonbin.bin.create(data)
 ```
+
+*usage*
+
+```
+/**
+ * Using the CREATE API, you can Create Public and Private bins.
+ *
+ * @param data T (Any class with @Serializable annotated)
+ * @param private Boolean (Required only if you want to mark the bin as Public)
+ * @param name String? (Required only if you want to add a Name to your Bin)
+ *
+ * @return BinCreate<T>
+ */
+```
+
+
 
 #### Read
 
-Using the READ API, you can Read Public and Private bins.
-
 ```kotlin
-Ksonbin.Bin.read(binId)
+Ksonbin.bin.read(binId)
 ```
+
+*usage*
+
+```
+/**
+ * Using the READ API, you can Read Public and Private bins.
+ *
+ * @param binId String
+ * @param secretKey String? (Required only if you are trying to read a private record)
+ *
+ * @return R (Any class with @Serializable annotated)
+ */
+```
+
+
 
 #### Update
 
-Using the UPDATE API, you can Update Public and Private bins.
-
 ```kotlin
-Ksonbin.Bin.update(binId, data)
+Ksonbin.bin.update(binId, data)
 ```
+
+*usage*
+
+```
+/**
+ * Using the UPDATE API, you can Update Public and Private bins.
+ *
+ * @param binId String
+ * @param data T (Any class with @Serializable annotated)
+ * @param secretKey String? (Required only if you are trying to update a private record)
+ * 
+ * @return BinUpdate<T>
+ */
+```
+
+
 
 #### Delete
 
-Using the DELETE API, you can Delete the Public or a Private bins.
-
 ```kotlin
-Ksonbin.Bin.delete(binId)
+Ksonbin.bin.delete(binId)
 ```
+
+*usage*
+
+```
+/**
+ * Using the DELETE API, you can Delete the Public  or a Private bins.
+ *
+ * @param binId String
+ * 
+ * @return BinDelete
+ */
+```
+
+
 
 > Experimental API
 
@@ -61,7 +114,7 @@ Ksonbin.Bin.delete(binId)
 Using the Request Versions API, you can fetch all the versions of a specific Bin.
 
 ```kotlin
-Ksonbin.Bin.requestVersions(binId)
+Ksonbin.bin.requestVersions(binId)
 ```
 
 
@@ -73,7 +126,7 @@ Ksonbin.Bin.requestVersions(binId)
 Using the COLLECTIONS CREATE API, you can CREATE Collections to group the records which later, can be fetched using the Query Builder.
 
 ```kotlin
-Ksonbin.Collections.create(name)
+Ksonbin.collections.create(name)
 ```
 
 #### Update
@@ -81,7 +134,7 @@ Ksonbin.Collections.create(name)
 Using the COLLECTIONS UPDATE API, you can UPDATE Collections name for now. We might add more meta data to the Collections which you can use the Update API for.
 
 ```
-Ksonbin.Collections.update(collectionId, name)
+Ksonbin.collections.update(collectionId, name)
 ```
 
 > Experimental API
@@ -91,7 +144,7 @@ Ksonbin.Collections.update(collectionId, name)
 Using the Request Versions API, you can fetch all the versions of a specific Bin.
 
 ```kotlin
-Ksonbin.Collections.allBins(collectionId)
+Ksonbin.collections.allBins(collectionId)
 ```
 
 
@@ -103,7 +156,7 @@ Ksonbin.Collections.allBins(collectionId)
 Using the CREATE API, you can Create Schema Docs.
 
 ```kotlin
-Ksonbin.SchemaDoc.create(name, schema)
+Ksonbin.schemaDoc.create(name, schema)
 ```
 
 #### Read
@@ -111,7 +164,7 @@ Ksonbin.SchemaDoc.create(name, schema)
 Using the READ API, you can Read the Schema Docs.
 
 ```kotlin
-Ksonbin.Schema.read(schemaId)
+Ksonbin.schema.read(schemaId)
 ```
 
 #### Update
@@ -119,5 +172,5 @@ Ksonbin.Schema.read(schemaId)
 Using the UPDATE API, you can Update Schema Docs.
 
 ```kotlin
-Ksonbin.Schema.update(schemaId, schema)
+Ksonbin.schema.update(schemaId, schema)
 ```

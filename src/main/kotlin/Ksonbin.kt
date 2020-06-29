@@ -1,22 +1,22 @@
 package `in`.zeromod.ksonbin
 
-import `in`.zeromod.ksonbin.payloads.BinCreateResponse
+import `in`.zeromod.ksonbin.payloads.Bin
 import io.ktor.client.HttpClient
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.defaultSerializer
+import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.header
-import io.ktor.client.request.post
-import io.ktor.client.request.url
-import io.ktor.http.ContentType
-import io.ktor.http.contentType
+import io.ktor.http.URLProtocol
 
 object Ksonbin {
-    var root: String = "https://api.jsonbin.io/"
-    lateinit var secretKey: Pair<String, String>
+    var schema = URLProtocol.HTTPS.name
+    var host = "api.jsonbin.io"
+    const val SECRET_KEY = "secret-key"
+    lateinit var secretKey: String
         private set
 
     fun init(secretKey: String) {
-        this.secretKey = "secret-key" to secretKey
+        this.secretKey = secretKey
     }
 
     val client = HttpClient {
@@ -24,15 +24,9 @@ object Ksonbin {
             serializer = defaultSerializer()
         }
     }
+    val bin = Bin(this)
+}
 
-    object Bin {
-        suspend inline fun <reified T : Any> create(data: T): BinCreateResponse<T> {
-            return client.post {
-                url("https://api.jsonbin.io/b")
-                header(secretKey.first, secretKey.second)
-                contentType(ContentType.Application.Json)
-                body = data
-            }
-        }
-    }
+fun HttpRequestBuilder.secretHeader(secretKey: String?) {
+    secretKey?.let { header(Ksonbin.SECRET_KEY, it) }
 }
