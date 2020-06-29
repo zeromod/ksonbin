@@ -5,11 +5,29 @@ Made with [ktor](https://ktor.io/) for light dependencies and 100% kotlin :heart
 
 ## Usage
 
-`Ksonbin` is a singleton using [object declarations](https://kotlinlang.org/docs/reference/object-declarations.html#object-declarations), means statically available to use anywhere and no need to create an instance.
+**Gradle**
+
+> [kotlinx-serialization](https://github.com/Kotlin/kotlinx.serialization) gradle plugin is required for JSON serialization/de-serialization
+>
+> Below is how it can be added with ksonbin, more info [here](https://github.com/Kotlin/kotlinx.serialization#gradle)
+
+*Kotlin DSL*
+
+​	add `kotlin("plugin.serialization") version "1.3.70"` in plugins
+
+​	add `implementation("in.zeromod:ksonbin:1.0")` in dependencies
+
+*Groovy DSL*
+
+​	add `id 'org.jetbrains.kotlin.plugin.serialization' version '1.3.70'` in plugins
+
+​	add `implementation "in.zeromod:ksonbin:1.0"` in dependencies
 
 ###  Init
 
-Initialisation that needs run only one time 
+`Ksonbin` is a singleton using [object declarations](https://kotlinlang.org/docs/reference/object-declarations.html#object-declarations), means statically available to use anywhere and no need to create an instance.
+
+Initialisation that needs run only one time.
 
 ```kotlin
 Ksonbin.init(secretKey = "YOUR_KEY_HERE")
