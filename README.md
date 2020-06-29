@@ -201,24 +201,61 @@ Ksonbin.collection.allBins(collectionId)
 
 #### Create
 
-Using the CREATE API, you can Create Schema Docs.
-
 ```kotlin
 Ksonbin.schemaDoc.create(name, schema)
 ```
 
-#### Read
+*usage*
 
-Using the READ API, you can Read the Schema Docs.
+```kotlin
+/**
+ * Using the CREATE API, you can Create Schema Docs.
+ *
+ * @param name String
+ * @param data D
+ *
+ * @return SchemaCreate<D>
+ */
+```
+
+
+
+#### Read
 
 ```kotlin
 Ksonbin.schema.read(schemaId)
 ```
 
-#### Update
+*usage*
 
-Using the UPDATE API, you can Update Schema Docs.
+```kotlin
+/**
+ * Using the READ API, you can Read the Schema Docs.
+ *
+ * @param schemaId String
+ *
+ * @return D
+ */
+```
+
+
+
+#### Update
 
 ```kotlin
 Ksonbin.schema.update(schemaId, schema)
 ```
+
+*usage*
+
+```kotlin
+/**
+ * Using the UPDATE API, you can Update Schema Docs.
+ *
+ * @param schemaId String
+ * @param data D
+ *
+ * @return SchemaUpdate<D>
+ */
+```
+

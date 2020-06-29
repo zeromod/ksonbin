@@ -23,7 +23,7 @@ class Bin(val ksonbin: Ksonbin) {
         private: Boolean = true,
         name: String? = null
     ): BinCreate<T> = Ksonbin.client.post(
-        scheme = Ksonbin.schema,
+        scheme = Ksonbin.scheme,
         host = Ksonbin.host,
         path = "/b",
         body = data
@@ -46,7 +46,7 @@ class Bin(val ksonbin: Ksonbin) {
         binId: String,
         secretKey: String? = ksonbin.secretKey
     ): R = Ksonbin.client.get(
-        scheme = Ksonbin.schema,
+        scheme = Ksonbin.scheme,
         host = Ksonbin.host,
         path = "/b/$binId/latest"
     ) {
@@ -67,7 +67,7 @@ class Bin(val ksonbin: Ksonbin) {
         data: T,
         secretKey: String? = ksonbin.secretKey
     ): BinUpdate<T> = Ksonbin.client.put(
-        scheme = Ksonbin.schema,
+        scheme = Ksonbin.scheme,
         host = Ksonbin.host,
         path = "/b/$binId",
         body = data
@@ -86,7 +86,7 @@ class Bin(val ksonbin: Ksonbin) {
     suspend fun delete(
         binId: String
     ): BinDelete = Ksonbin.client.delete(
-        scheme = Ksonbin.schema,
+        scheme = Ksonbin.scheme,
         host = Ksonbin.host,
         path = "/b/$binId"
     ) {

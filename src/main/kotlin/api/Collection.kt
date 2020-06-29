@@ -22,7 +22,7 @@ class Collection(private val ksonbin: Ksonbin) {
     suspend fun create(
         name: String
     ): CollectionCreate = ksonbin.client.post(
-        scheme = ksonbin.schema,
+        scheme = ksonbin.scheme,
         host = ksonbin.host,
         path = "/c",
         body = CollectionInfo(name)
@@ -49,7 +49,7 @@ class Collection(private val ksonbin: Ksonbin) {
         schemaDocId: String? = null,
         removeSchemaDoc: Boolean = false
     ): CollectionUpdate = ksonbin.client.put(
-        scheme = ksonbin.schema,
+        scheme = ksonbin.scheme,
         host = ksonbin.host,
         path = "/c/$collectionID",
         body = CollectionInfo(name)
