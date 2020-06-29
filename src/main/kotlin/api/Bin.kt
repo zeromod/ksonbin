@@ -12,17 +12,17 @@ class Bin(val ksonbin: Ksonbin) {
     /**
      * Using the CREATE API, you can Create Public and Private bins.
      *
-     * @param data T (Any class with @Serializable annotated)
+     * @param data JSON (Any class with @Serializable annotated)
      * @param private Boolean (Required only if you want to mark the bin as Public)
      * @param name String? (Required only if you want to add a Name to your Bin)
      *
-     * @return BinCreate<T>
+     * @return BinCreate<JSON>
      */
-    suspend inline fun <reified T : Any> create(
-        data: T,
+    suspend inline fun <reified JSON : Any> create(
+        data: JSON,
         private: Boolean = true,
         name: String? = null
-    ): BinCreate<T> = Ksonbin.client.post(
+    ): BinCreate<JSON> = Ksonbin.client.post(
         scheme = Ksonbin.scheme,
         host = Ksonbin.host,
         path = "/b",
@@ -40,12 +40,12 @@ class Bin(val ksonbin: Ksonbin) {
      * @param binId String
      * @param secretKey String? (Required only if you are trying to read a private record)
      *
-     * @return R (Any class with @Serializable annotated)
+     * @return JSON (Any class with @Serializable annotated)
      */
-    suspend inline fun <reified R : Any> read(
+    suspend inline fun <reified JSON : Any> read(
         binId: String,
         secretKey: String? = ksonbin.secretKey
-    ): R = Ksonbin.client.get(
+    ): JSON = Ksonbin.client.get(
         scheme = Ksonbin.scheme,
         host = Ksonbin.host,
         path = "/b/$binId/latest"
@@ -57,16 +57,16 @@ class Bin(val ksonbin: Ksonbin) {
      * Using the UPDATE API, you can Update Public and Private bins.
      *
      * @param binId String
-     * @param data T (Any class with @Serializable annotated)
+     * @param data JSON (Any class with @Serializable annotated)
      * @param secretKey String? (Required only if you are trying to update a private record)
      *
-     * @return BinUpdate<T>
+     * @return BinUpdate<JSON>
      */
-    suspend inline fun <reified T : Any> update(
+    suspend inline fun <reified JSON : Any> update(
         binId: String,
-        data: T,
+        data: JSON,
         secretKey: String? = ksonbin.secretKey
-    ): BinUpdate<T> = Ksonbin.client.put(
+    ): BinUpdate<JSON> = Ksonbin.client.put(
         scheme = Ksonbin.scheme,
         host = Ksonbin.host,
         path = "/b/$binId",
@@ -95,17 +95,17 @@ class Bin(val ksonbin: Ksonbin) {
 }
 
 @Serializable
-data class BinCreate<T>(
+data class BinCreate<JSON>(
     val success: Boolean,
-    val data: T,
+    val data: JSON,
     val id: String,
     val private: Boolean
 )
 
 @Serializable
-data class BinUpdate<T>(
+data class BinUpdate<JSON>(
     val success: Boolean,
-    val data: T,
+    val data: JSON,
     val version: Int,
     val parentId: String
 )

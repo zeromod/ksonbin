@@ -52,11 +52,11 @@ Ksonbin.bin.create(data)
 /**
  * Using the CREATE API, you can Create Public and Private bins.
  *
- * @param data T (Any class with @Serializable annotated)
+ * @param data JSON (Any class with @Serializable annotated)
  * @param private Boolean (Required only if you want to mark the bin as Public)
  * @param name String? (Required only if you want to add a Name to your Bin)
  *
- * @return BinCreate<T>
+ * @return BinCreate<JSON>
  */
 ```
 
@@ -77,7 +77,7 @@ Ksonbin.bin.read(binId)
  * @param binId String
  * @param secretKey String? (Required only if you are trying to read a private record)
  *
- * @return R (Any class with @Serializable annotated)
+ * @return JSON (Any class with @Serializable annotated)
  */
 ```
 
@@ -96,10 +96,10 @@ Ksonbin.bin.update(binId, data)
  * Using the UPDATE API, you can Update Public and Private bins.
  *
  * @param binId String
- * @param data T (Any class with @Serializable annotated)
+ * @param data JSON (Any class with @Serializable annotated)
  * @param secretKey String? (Required only if you are trying to update a private record)
  * 
- * @return BinUpdate<T>
+ * @return BinUpdate<JSON>
  */
 ```
 
@@ -212,9 +212,9 @@ Ksonbin.schemaDoc.create(name, schema)
  * Using the CREATE API, you can Create Schema Docs.
  *
  * @param name String
- * @param data D
+ * @param data SCHEMA
  *
- * @return SchemaCreate<D>
+ * @return SchemaCreate<SCHEMA>
  */
 ```
 
@@ -234,7 +234,7 @@ Ksonbin.schema.read(schemaId)
  *
  * @param schemaId String
  *
- * @return D
+ * @return SCHEMA
  */
 ```
 
@@ -253,9 +253,9 @@ Ksonbin.schema.update(schemaId, schema)
  * Using the UPDATE API, you can Update Schema Docs.
  *
  * @param schemaId String
- * @param data D
+ * @param data SCHEMA
  *
- * @return SchemaUpdate<D>
+ * @return SchemaUpdate<SCHEMA>
  */
 ```
 

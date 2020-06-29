@@ -15,14 +15,14 @@ class Schema(val ksonbin: Ksonbin) {
      * Using the CREATE API, you can Create Schema Docs.
      *
      * @param name String
-     * @param data D
+     * @param data SCHEMA
      *
-     * @return SchemaCreate<D>
+     * @return SchemaCreate<SCHEMA>
      */
-    suspend inline fun <reified D : Any> create(
+    suspend inline fun <reified SCHEMA : Any> create(
         name: String,
-        data: D
-    ): SchemaCreate<D> = ksonbin.client.post(
+        data: SCHEMA
+    ): SchemaCreate<SCHEMA> = ksonbin.client.post(
         scheme = ksonbin.scheme,
         host = ksonbin.host,
         path = "/s",
@@ -38,11 +38,11 @@ class Schema(val ksonbin: Ksonbin) {
      *
      * @param schemaId String
      *
-     * @return D
+     * @return SCHEMA
      */
-    suspend inline fun <reified D : Any> read(
+    suspend inline fun <reified SCHEMA : Any> read(
         schemaId: String
-    ): D = ksonbin.client.get(
+    ): SCHEMA = ksonbin.client.get(
         scheme = ksonbin.scheme,
         host = ksonbin.host,
         path = "/s/$schemaId"
@@ -54,14 +54,14 @@ class Schema(val ksonbin: Ksonbin) {
      * Using the UPDATE API, you can Update Schema Docs.
      *
      * @param schemaId String
-     * @param data D
+     * @param data SCHEMA
      *
-     * @return SchemaUpdate<D>
+     * @return SchemaUpdate<SCHEMA>
      */
-    suspend inline fun <reified D : Any> update(
+    suspend inline fun <reified SCHEMA : Any> update(
         schemaId: String,
-        data: D
-    ): SchemaUpdate<D> = ksonbin.client.put(
+        data: SCHEMA
+    ): SchemaUpdate<SCHEMA> = ksonbin.client.put(
         scheme = ksonbin.scheme,
         host = ksonbin.host,
         path = "/s/$schemaId",
@@ -73,15 +73,15 @@ class Schema(val ksonbin: Ksonbin) {
 }
 
 @Serializable
-data class SchemaCreate<D>(
+data class SchemaCreate<SCHEMA>(
     val success: Boolean,
-    val data: D,
+    val data: SCHEMA,
     val id: String
 )
 
 @Serializable
-data class SchemaUpdate<D>(
+data class SchemaUpdate<SCHEMA>(
     val success: Boolean,
-    val data: D,
+    val data: SCHEMA,
     val id: String
 )
