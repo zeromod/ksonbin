@@ -123,8 +123,6 @@ Ksonbin.bin.requestVersions(binId)
 
 #### Create
 
-Using the COLLECTIONS CREATE API, you can CREATE Collections to group the records which later, can be fetched using the Query Builder.
-
 ```kotlin
 Ksonbin.collection.create(name)
 ```
@@ -145,8 +143,6 @@ Ksonbin.collection.create(name)
 
 
 #### Update
-
-Using the COLLECTIONS UPDATE API, you can UPDATE Collections name for now. We might add more meta data to the Collections which you can use the Update API for.
 
 ```
 Ksonbin.collection.update(collectionId, name)
