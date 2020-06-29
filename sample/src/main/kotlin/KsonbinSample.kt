@@ -26,10 +26,10 @@ suspend fun binSample() {
 }
 
 suspend fun collectionSample() {
-    val collectionCreate: CollectionCreate = Ksonbin.collection.create(CollectionInfo("partha"))
+    val collectionCreate: CollectionCreate = Ksonbin.collection.create("partha")
     println(collectionCreate)
 
-    val collectionUpdate: CollectionUpdate = Ksonbin.collection.update(collectionCreate.id, CollectionInfo("ksonbin"))
+    val collectionUpdate: CollectionUpdate = Ksonbin.collection.update(collectionCreate.id, "ksonbin")
     println(collectionUpdate)
 }
 

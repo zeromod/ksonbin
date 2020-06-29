@@ -20,12 +20,12 @@ class Collection(private val ksonbin: Ksonbin) {
      * @return CollectionCreate
      */
     suspend fun create(
-        collectionInfo: CollectionInfo
+        name: String
     ): CollectionCreate = ksonbin.client.post(
         scheme = ksonbin.schema,
         host = ksonbin.host,
         path = "/c",
-        body = collectionInfo
+        body = CollectionInfo(name)
     ) {
         contentType(ContentType.Application.Json)
         secretHeader(ksonbin.secretKey)
@@ -45,14 +45,14 @@ class Collection(private val ksonbin: Ksonbin) {
      */
     suspend fun update(
         collectionID: String,
-        collectionInfo: CollectionInfo,
+        name: String,
         schemaDocId: String? = null,
         removeSchemaDoc: Boolean = false
     ): CollectionUpdate = ksonbin.client.put(
         scheme = ksonbin.schema,
         host = ksonbin.host,
         path = "/c/$collectionID",
-        body = collectionInfo
+        body = CollectionInfo(name)
     ) {
         contentType(ContentType.Application.Json)
         secretHeader(ksonbin.secretKey)
