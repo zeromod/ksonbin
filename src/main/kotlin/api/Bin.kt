@@ -1,4 +1,4 @@
-package `in`.zeromod.ksonbin.payloads
+package `in`.zeromod.ksonbin.api
 
 import `in`.zeromod.ksonbin.Ksonbin
 import `in`.zeromod.ksonbin.secretHeader

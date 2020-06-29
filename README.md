@@ -30,7 +30,7 @@ Ksonbin.bin.create(data)
 
 *usage*
 
-```
+```kotlin
 /**
  * Using the CREATE API, you can Create Public and Private bins.
  *
@@ -52,7 +52,7 @@ Ksonbin.bin.read(binId)
 
 *usage*
 
-```
+```kotlin
 /**
  * Using the READ API, you can Read Public and Private bins.
  *
@@ -73,7 +73,7 @@ Ksonbin.bin.update(binId, data)
 
 *usage*
 
-```
+```kotlin
 /**
  * Using the UPDATE API, you can Update Public and Private bins.
  *
@@ -95,7 +95,7 @@ Ksonbin.bin.delete(binId)
 
 *usage*
 
-```
+```kotlin
 /**
  * Using the DELETE API, you can Delete the Public  or a Private bins.
  *
@@ -126,16 +126,50 @@ Ksonbin.bin.requestVersions(binId)
 Using the COLLECTIONS CREATE API, you can CREATE Collections to group the records which later, can be fetched using the Query Builder.
 
 ```kotlin
-Ksonbin.collections.create(name)
+Ksonbin.collection.create(name)
 ```
+
+*usage*
+
+```kotlin
+/**
+ * Using the COLLECTIONS CREATE API, you can CREATE Collections to group the records
+ * which later, can be fetched usin the Query Builder.
+ *
+ * @param collectionInfo CollectionInfo
+ *
+ * @return CollectionCreate
+ */
+```
+
+
 
 #### Update
 
 Using the COLLECTIONS UPDATE API, you can UPDATE Collections name for now. We might add more meta data to the Collections which you can use the Update API for.
 
 ```
-Ksonbin.collections.update(collectionId, name)
+Ksonbin.collection.update(collectionId, name)
 ```
+
+*usage*
+
+```kotlin
+/**
+ * Using the COLLECTIONS UPDATE API, you can UPDATE Collections name for now.
+ * We might add more meta data to the Collections which you can
+ * use the Update API for.
+ *
+ * @param collectionID String
+ * @param collectionInfo CollectionInfo
+ * @param schemaDocId String? (Required only if you want to attach a Schema Doc to the Collection)
+ * @param removeSchemaDoc Boolean (Required only if you want to detach a Schema Doc from the Collection)
+ *
+ * @return CollectionUpdate
+ */
+```
+
+
 
 > Experimental API
 
@@ -144,7 +178,7 @@ Ksonbin.collections.update(collectionId, name)
 Using the Request Versions API, you can fetch all the versions of a specific Bin.
 
 ```kotlin
-Ksonbin.collections.allBins(collectionId)
+Ksonbin.collection.allBins(collectionId)
 ```
 
 

@@ -1,6 +1,7 @@
 package `in`.zeromod.ksonbin
 
-import `in`.zeromod.ksonbin.payloads.Bin
+import `in`.zeromod.ksonbin.api.Bin
+import `in`.zeromod.ksonbin.api.Collection
 import io.ktor.client.HttpClient
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.defaultSerializer
@@ -25,6 +26,7 @@ object Ksonbin {
         }
     }
     val bin = Bin(this)
+    val collection = Collection(this)
 }
 
 fun HttpRequestBuilder.secretHeader(secretKey: String?) {
