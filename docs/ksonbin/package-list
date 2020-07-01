@@ -1,5 +1,0 @@
-$dokka.format:html
-$dokka.linkExtension:html
-$dokka.location:in.zeromod.ksonbin$secretHeader(io.ktor.client.request.HttpRequestBuilder, kotlin.String)in.zeromod.ksonbin/io.ktor.client.request.-http-request-builder/secret-header.html
-in.zeromod.ksonbin
-in.zeromod.ksonbin.api
