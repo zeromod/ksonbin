@@ -1,8 +1,12 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [Bin](index.md) / [delete](./delete.md)
+---
+title: Bin.delete - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [Bin](index.html) / [delete](./delete.html)
 
 # delete
 
-`suspend fun delete(binId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`BinDelete`](../-bin-delete/index.md)
+`suspend fun delete(binId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`BinDelete`](../-bin-delete/index.html)
 
 Using the DELETE API, you can Delete the Public  or a Private bins.
 
@@ -11,5 +15,5 @@ Using the DELETE API, you can Delete the Public  or a Private bins.
 `binId` - String
 
 **Return**
-BinDelete
+[BinDelete](../-bin-delete/index.html)
 

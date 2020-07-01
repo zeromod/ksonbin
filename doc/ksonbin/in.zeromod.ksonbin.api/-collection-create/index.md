@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [CollectionCreate](./index.md)
+---
+title: CollectionCreate - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [CollectionCreate](./index.html)
 
 # CollectionCreate
 
@@ -6,14 +10,11 @@
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `CollectionCreate(success: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, data: `[`CollectionInfo`](../-collection-info/index.md)`, id: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)` |
+| [&lt;init&gt;](-init-.html) | `CollectionCreate(success: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, data: `[`CollectionInfo`](../-collection-info/index.html)`, id: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)` |
 
 ### Properties
 
-| Name | Summary |
-|---|---|
-| [data](data.md) | `val data: `[`CollectionInfo`](../-collection-info/index.md) |
-| [id](id.md) | `val id: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [success](success.md) | `val success: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [data](data.html) | `val data: `[`CollectionInfo`](../-collection-info/index.html) |
+| [id](id.html) | `val id: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [success](success.html) | `val success: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+

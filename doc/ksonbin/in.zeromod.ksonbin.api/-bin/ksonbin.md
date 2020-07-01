@@ -1,5 +1,9 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [Bin](index.md) / [ksonbin](./ksonbin.md)
+---
+title: Bin.ksonbin - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [Bin](index.html) / [ksonbin](./ksonbin.html)
 
 # ksonbin
 
-`val ksonbin: `[`Ksonbin`](../../in.zeromod.ksonbin/-ksonbin/index.md)
+`val ksonbin: `[`Ksonbin`](../../in.zeromod.ksonbin/-ksonbin/index.html)

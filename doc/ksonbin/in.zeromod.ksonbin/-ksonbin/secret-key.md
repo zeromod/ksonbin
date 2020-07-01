@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin](../index.md) / [Ksonbin](index.md) / [secretKey](./secret-key.md)
+---
+title: Ksonbin.secretKey - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin](../index.html) / [Ksonbin](index.html) / [secretKey](./secret-key.html)
 
 # secretKey
 

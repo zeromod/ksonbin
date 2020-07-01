@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [CollectionInfo](index.md) / [name](./name.md)
+---
+title: CollectionInfo.name - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [CollectionInfo](index.html) / [name](./name.html)
 
 # name
 

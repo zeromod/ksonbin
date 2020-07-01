@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [CollectionCreate](index.md) / [id](./id.md)
+---
+title: CollectionCreate.id - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [CollectionCreate](index.html) / [id](./id.html)
 
 # id
 

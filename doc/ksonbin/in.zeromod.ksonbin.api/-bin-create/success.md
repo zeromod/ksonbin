@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinCreate](index.md) / [success](./success.md)
+---
+title: BinCreate.success - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinCreate](index.html) / [success](./success.html)
 
 # success
 

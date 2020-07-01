@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinCreate](index.md) / [private](./private.md)
+---
+title: BinCreate.private - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinCreate](index.html) / [private](./private.html)
 
 # private
 

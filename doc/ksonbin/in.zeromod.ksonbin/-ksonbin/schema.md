@@ -1,5 +1,9 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin](../index.md) / [Ksonbin](index.md) / [schema](./schema.md)
+---
+title: Ksonbin.schema - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin](../index.html) / [Ksonbin](index.html) / [schema](./schema.html)
 
 # schema
 
-`var schema: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+`val schema: `[`Schema`](../../in.zeromod.ksonbin.api/-schema/index.html)

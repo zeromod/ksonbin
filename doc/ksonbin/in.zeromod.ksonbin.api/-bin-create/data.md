@@ -1,5 +1,9 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinCreate](index.md) / [data](./data.md)
+---
+title: BinCreate.data - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinCreate](index.html) / [data](./data.html)
 
 # data
 
-`val data: T`
+`val data: JSON`

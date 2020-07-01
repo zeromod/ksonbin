@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinUpdate](index.md) / [version](./version.md)
+---
+title: BinUpdate.version - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinUpdate](index.html) / [version](./version.html)
 
 # version
 

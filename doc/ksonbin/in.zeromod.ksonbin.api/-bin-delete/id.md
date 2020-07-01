@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinDelete](index.md) / [id](./id.md)
+---
+title: BinDelete.id - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinDelete](index.html) / [id](./id.html)
 
 # id
 

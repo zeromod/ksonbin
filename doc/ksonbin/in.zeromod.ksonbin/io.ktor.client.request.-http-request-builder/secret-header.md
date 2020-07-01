@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin](../index.md) / [io.ktor.client.request.HttpRequestBuilder](index.md) / [secretHeader](./secret-header.md)
+---
+title: secretHeader - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin](../index.html) / [io.ktor.client.request.HttpRequestBuilder](index.html) / [secretHeader](./secret-header.html)
 
 # secretHeader
 

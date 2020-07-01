@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinDelete](index.md) / [success](./success.md)
+---
+title: BinDelete.success - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinDelete](index.html) / [success](./success.html)
 
 # success
 

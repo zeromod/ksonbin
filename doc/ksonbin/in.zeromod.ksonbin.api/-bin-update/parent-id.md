@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinUpdate](index.md) / [parentId](./parent-id.md)
+---
+title: BinUpdate.parentId - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinUpdate](index.html) / [parentId](./parent-id.html)
 
 # parentId
 

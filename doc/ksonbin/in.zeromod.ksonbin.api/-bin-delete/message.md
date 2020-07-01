@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinDelete](index.md) / [message](./message.md)
+---
+title: BinDelete.message - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinDelete](index.html) / [message](./message.html)
 
 # message
 

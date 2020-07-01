@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin](../index.md) / [Ksonbin](index.md) / [host](./host.md)
+---
+title: Ksonbin.host - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin](../index.html) / [Ksonbin](index.html) / [host](./host.html)
 
 # host
 

@@ -1,15 +1,16 @@
-[ksonbin](../index.md) / [in.zeromod.ksonbin](./index.md)
+---
+title: in.zeromod.ksonbin - ksonbin
+---
+
+[ksonbin](../index.html) / [in.zeromod.ksonbin](./index.html)
 
 ## Package in.zeromod.ksonbin
 
 ### Types
 
-| Name | Summary |
-|---|---|
-| [Ksonbin](-ksonbin/index.md) | `object Ksonbin` |
+| [Ksonbin](-ksonbin/index.html) | `object Ksonbin` |
 
 ### Extensions for External Classes
 
-| Name | Summary |
-|---|---|
-| [io.ktor.client.request.HttpRequestBuilder](io.ktor.client.request.-http-request-builder/index.md) |  |
+| [io.ktor.client.request.HttpRequestBuilder](io.ktor.client.request.-http-request-builder/index.html) |  |
+

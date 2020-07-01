@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [CollectionCreate](index.md) / [success](./success.md)
+---
+title: CollectionCreate.success - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [CollectionCreate](index.html) / [success](./success.html)
 
 # success
 

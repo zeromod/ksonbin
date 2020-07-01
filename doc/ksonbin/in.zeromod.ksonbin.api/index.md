@@ -1,16 +1,22 @@
-[ksonbin](../index.md) / [in.zeromod.ksonbin.api](./index.md)
+---
+title: in.zeromod.ksonbin.api - ksonbin
+---
+
+[ksonbin](../index.html) / [in.zeromod.ksonbin.api](./index.html)
 
 ## Package in.zeromod.ksonbin.api
 
 ### Types
 
-| Name | Summary |
-|---|---|
-| [Bin](-bin/index.md) | `class Bin` |
-| [BinCreate](-bin-create/index.md) | `data class BinCreate<T>` |
-| [BinDelete](-bin-delete/index.md) | `data class BinDelete` |
-| [BinUpdate](-bin-update/index.md) | `data class BinUpdate<T>` |
-| [Collection](-collection/index.md) | `class Collection` |
-| [CollectionCreate](-collection-create/index.md) | `data class CollectionCreate` |
-| [CollectionInfo](-collection-info/index.md) | `data class CollectionInfo` |
-| [CollectionUpdate](-collection-update/index.md) | `data class CollectionUpdate` |
+| [Bin](-bin/index.html) | `class Bin` |
+| [BinCreate](-bin-create/index.html) | `data class BinCreate<JSON>` |
+| [BinDelete](-bin-delete/index.html) | `data class BinDelete` |
+| [BinUpdate](-bin-update/index.html) | `data class BinUpdate<JSON>` |
+| [Collection](-collection/index.html) | `class Collection` |
+| [CollectionCreate](-collection-create/index.html) | `data class CollectionCreate` |
+| [CollectionInfo](-collection-info/index.html) | `data class CollectionInfo` |
+| [CollectionUpdate](-collection-update/index.html) | `data class CollectionUpdate` |
+| [Schema](-schema/index.html) | `class Schema` |
+| [SchemaCreate](-schema-create/index.html) | `data class SchemaCreate<SCHEMA>` |
+| [SchemaUpdate](-schema-update/index.html) | `data class SchemaUpdate<SCHEMA>` |
+

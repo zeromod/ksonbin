@@ -1,4 +1,8 @@
-[ksonbin](../../index.md) / [in.zeromod.ksonbin.api](../index.md) / [BinCreate](index.md) / [id](./id.md)
+---
+title: BinCreate.id - ksonbin
+---
+
+[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinCreate](index.html) / [id](./id.html)
 
 # id
 
