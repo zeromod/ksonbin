@@ -15,9 +15,9 @@ class Collection(private val ksonbin: Ksonbin) {
      * Using the COLLECTIONS CREATE API, you can CREATE Collections to group the records
      * which later, can be fetched usin the Query Builder.
      *
-     * @param collectionInfo CollectionInfo
+     * @param name String
      *
-     * @return CollectionCreate
+     * @return [CollectionCreate]
      */
     suspend fun create(
         name: String
@@ -37,11 +37,11 @@ class Collection(private val ksonbin: Ksonbin) {
      * use the Update API for.
      *
      * @param collectionID String
-     * @param collectionInfo CollectionInfo
+     * @param name String
      * @param schemaDocId String? (Required only if you want to attach a Schema Doc to the Collection)
      * @param removeSchemaDoc Boolean (Required only if you want to detach a Schema Doc from the Collection)
      *
-     * @return CollectionUpdate
+     * @return [CollectionUpdate]
      */
     suspend fun update(
         collectionID: String,

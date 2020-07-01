@@ -13,13 +13,15 @@ class Bin(val ksonbin: Ksonbin) {
      * Using the CREATE API, you can Create Public and Private bins.
      *
      * @param data JSON (Any class with @Serializable annotated)
+     * @param collectionId String? (Required only if you want to add a record to one of the Collections you created)
      * @param private Boolean (Required only if you want to mark the bin as Public)
      * @param name String? (Required only if you want to add a Name to your Bin)
      *
-     * @return BinCreate<JSON>
+     * @return [BinCreate]<[JSON]>
      */
     suspend inline fun <reified JSON : Any> create(
         data: JSON,
+        collectionId: String? = null,
         private: Boolean = true,
         name: String? = null
     ): BinCreate<JSON> = Ksonbin.client.post(
@@ -30,6 +32,7 @@ class Bin(val ksonbin: Ksonbin) {
     ) {
         contentType(ContentType.Application.Json)
         secretHeader(ksonbin.secretKey)
+        if (!collectionId.isNullOrBlank()) header("collection-id", collectionId)
         if (!private) header("private", false)
         if (!name.isNullOrBlank()) header("name", name)
     }
@@ -38,17 +41,19 @@ class Bin(val ksonbin: Ksonbin) {
      * Using the READ API, you can Read Public and Private bins.
      *
      * @param binId String
+     * @param binVersion Int? (Required only if you are trying to read a specific version of bin)
      * @param secretKey String? (Required only if you are trying to read a private record)
      *
-     * @return JSON (Any class with @Serializable annotated)
+     * @return [JSON] (Any class with @Serializable annotated)
      */
     suspend inline fun <reified JSON : Any> read(
         binId: String,
+        binVersion: Int? = null,
         secretKey: String? = ksonbin.secretKey
     ): JSON = Ksonbin.client.get(
         scheme = Ksonbin.scheme,
         host = Ksonbin.host,
-        path = "/b/$binId/latest"
+        path = if (binVersion != null) "/b/$binId/$binVersion" else "/b/$binId/latest"
     ) {
         secretHeader(secretKey)
     }
@@ -58,13 +63,15 @@ class Bin(val ksonbin: Ksonbin) {
      *
      * @param binId String
      * @param data JSON (Any class with @Serializable annotated)
+     * @param versioning Boolean (Required only if you want to disable versioning on private records)
      * @param secretKey String? (Required only if you are trying to update a private record)
      *
-     * @return BinUpdate<JSON>
+     * @return [BinUpdate]<[JSON]>
      */
     suspend inline fun <reified JSON : Any> update(
         binId: String,
         data: JSON,
+        versioning: Boolean = true,
         secretKey: String? = ksonbin.secretKey
     ): BinUpdate<JSON> = Ksonbin.client.put(
         scheme = Ksonbin.scheme,
@@ -72,8 +79,9 @@ class Bin(val ksonbin: Ksonbin) {
         path = "/b/$binId",
         body = data
     ) {
-        secretHeader(secretKey)
         contentType(ContentType.Application.Json)
+        secretHeader(secretKey)
+        if (!versioning) header("versioning", false)
     }
 
     /**
@@ -81,7 +89,7 @@ class Bin(val ksonbin: Ksonbin) {
      *
      * @param binId String
      *
-     * @return BinDelete
+     * @return [BinDelete]
      */
     suspend fun delete(
         binId: String

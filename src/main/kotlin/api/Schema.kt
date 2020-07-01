@@ -17,7 +17,7 @@ class Schema(val ksonbin: Ksonbin) {
      * @param name String
      * @param data SCHEMA
      *
-     * @return SchemaCreate<SCHEMA>
+     * @return [SchemaCreate]<[SCHEMA]>
      */
     suspend inline fun <reified SCHEMA : Any> create(
         name: String,
@@ -38,7 +38,7 @@ class Schema(val ksonbin: Ksonbin) {
      *
      * @param schemaId String
      *
-     * @return SCHEMA
+     * @return [SCHEMA]
      */
     suspend inline fun <reified SCHEMA : Any> read(
         schemaId: String
@@ -56,7 +56,7 @@ class Schema(val ksonbin: Ksonbin) {
      * @param schemaId String
      * @param data SCHEMA
      *
-     * @return SchemaUpdate<SCHEMA>
+     * @return [SchemaUpdate]<[SCHEMA]>
      */
     suspend inline fun <reified SCHEMA : Any> update(
         schemaId: String,
