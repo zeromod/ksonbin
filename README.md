@@ -3,7 +3,7 @@
 
 Made with [ktor](https://ktor.io/) for light dependencies and 100% kotlin :heart:
 
-## Usage
+## Usage (WIP)
 
 **Gradle**
 
@@ -37,225 +37,27 @@ Ksonbin.init(secretKey = "YOUR_KEY_HERE")
 
 ## API Usage
 
-> [API reference](https://jsonbin.io/api-reference) 
+> Recommended reading this first : [Jsonbin API reference](https://jsonbin.io/api-reference) 
 
-### BIN
-#### Create
+[Ksonbin Documentation]()
 
-```kotlin
-Ksonbin.bin.create(data)
-```
-
-*usage*
+## Quick sample
 
 ```kotlin
-/**
- * Using the CREATE API, you can Create Public and Private bins.
- *
- * @param data JSON (Any class with @Serializable annotated)
- * @param private Boolean (Required only if you want to mark the bin as Public)
- * @param name String? (Required only if you want to add a Name to your Bin)
- *
- * @return BinCreate<JSON>
- */
+fun main() {
+	Ksonbin.init("YOUR_API_KEY_HERE")
+ 
+	val newBin: BinCreate<Chat> = Ksonbin.bin.create(Chat("Hi"))
+    //BinCreate(success=true, data=Chat(message=Hi), id=5efcc1f87f16b71d48a96f91, private=true)
+
+	val chat: Chat = Ksonbin.bin.read(newBin.id)
+    //Chat(message=Hi)
+}
+
+@Serializable
+data class Chat(
+    val message: String
+)
 ```
 
-
-
-#### Read
-
-```kotlin
-Ksonbin.bin.read(binId)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the READ API, you can Read Public and Private bins.
- *
- * @param binId String
- * @param secretKey String? (Required only if you are trying to read a private record)
- *
- * @return JSON (Any class with @Serializable annotated)
- */
-```
-
-
-
-#### Update
-
-```kotlin
-Ksonbin.bin.update(binId, data)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the UPDATE API, you can Update Public and Private bins.
- *
- * @param binId String
- * @param data JSON (Any class with @Serializable annotated)
- * @param secretKey String? (Required only if you are trying to update a private record)
- * 
- * @return BinUpdate<JSON>
- */
-```
-
-
-
-#### Delete
-
-```kotlin
-Ksonbin.bin.delete(binId)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the DELETE API, you can Delete the Public  or a Private bins.
- *
- * @param binId String
- * 
- * @return BinDelete
- */
-```
-
-
-
-> Experimental API
-
-#### Request versions
-
-Using the Request Versions API, you can fetch all the versions of a specific Bin.
-
-```kotlin
-Ksonbin.bin.requestVersions(binId)
-```
-
-
-
-### Collections
-
-#### Create
-
-```kotlin
-Ksonbin.collection.create(name)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the COLLECTIONS CREATE API, you can CREATE Collections to group the records
- * which later, can be fetched usin the Query Builder.
- *
- * @param collectionInfo CollectionInfo
- *
- * @return CollectionCreate
- */
-```
-
-
-
-#### Update
-
-```
-Ksonbin.collection.update(collectionId, name)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the COLLECTIONS UPDATE API, you can UPDATE Collections name for now.
- * We might add more meta data to the Collections which you can
- * use the Update API for.
- *
- * @param collectionID String
- * @param collectionInfo CollectionInfo
- * @param schemaDocId String? (Required only if you want to attach a Schema Doc to the Collection)
- * @param removeSchemaDoc Boolean (Required only if you want to detach a Schema Doc from the Collection)
- *
- * @return CollectionUpdate
- */
-```
-
-
-
-> Experimental API
-
-#### All bins
-
-Using the Request Versions API, you can fetch all the versions of a specific Bin.
-
-```kotlin
-Ksonbin.collection.allBins(collectionId)
-```
-
-
-
-### Schema Docs
-
-#### Create
-
-```kotlin
-Ksonbin.schemaDoc.create(name, schema)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the CREATE API, you can Create Schema Docs.
- *
- * @param name String
- * @param data SCHEMA
- *
- * @return SchemaCreate<SCHEMA>
- */
-```
-
-
-
-#### Read
-
-```kotlin
-Ksonbin.schema.read(schemaId)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the READ API, you can Read the Schema Docs.
- *
- * @param schemaId String
- *
- * @return SCHEMA
- */
-```
-
-
-
-#### Update
-
-```kotlin
-Ksonbin.schema.update(schemaId, schema)
-```
-
-*usage*
-
-```kotlin
-/**
- * Using the UPDATE API, you can Update Schema Docs.
- *
- * @param schemaId String
- * @param data SCHEMA
- *
- * @return SchemaUpdate<SCHEMA>
- */
-```
-
+> More samples at [KsonbinSample.kt](https://github.com/zeromod/ksonbin/blob/master/sample/src/main/kotlin/KsonbinSample.kt)
