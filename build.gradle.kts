@@ -41,7 +41,7 @@ tasks {
 
 tasks {
     val dokka by getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
-        outputFormat = "jekyll"
+        outputFormat = "html"
         outputDirectory = "$rootDir/docs"
     }
 }

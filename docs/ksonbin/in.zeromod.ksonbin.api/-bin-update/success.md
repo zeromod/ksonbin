@@ -1,9 +1,0 @@
----
-title: BinUpdate.success - ksonbin
----
-
-[ksonbin](../../index.html) / [in.zeromod.ksonbin.api](../index.html) / [BinUpdate](index.html) / [success](./success.html)
-
-# success
-
-`val success: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)

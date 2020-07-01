@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bin.update - ksonbin</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ksonbin</a>&nbsp;/&nbsp;<a href="../index.html">in.zeromod.ksonbin.api</a>&nbsp;/&nbsp;<a href="index.html">Bin</a>&nbsp;/&nbsp;<a href="./update.html">update</a><br/>
+<br/>
+<h1>update</h1>
+<a name="in.zeromod.ksonbin.api.Bin$update(kotlin.String, in.zeromod.ksonbin.api.Bin.update.JSON, kotlin.Boolean, kotlin.String)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="keyword">reified</span>&nbsp;<span class="identifier">JSON</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">update</span><span class="symbol">(</span><span class="identifier" id="in.zeromod.ksonbin.api.Bin$update(kotlin.String, in.zeromod.ksonbin.api.Bin.update.JSON, kotlin.Boolean, kotlin.String)/binId">binId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="in.zeromod.ksonbin.api.Bin$update(kotlin.String, in.zeromod.ksonbin.api.Bin.update.JSON, kotlin.Boolean, kotlin.String)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">JSON</span><span class="symbol">, </span><span class="identifier" id="in.zeromod.ksonbin.api.Bin$update(kotlin.String, in.zeromod.ksonbin.api.Bin.update.JSON, kotlin.Boolean, kotlin.String)/versioning">versioning</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="in.zeromod.ksonbin.api.Bin$update(kotlin.String, in.zeromod.ksonbin.api.Bin.update.JSON, kotlin.Boolean, kotlin.String)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;ksonbin.secretKey<span class="symbol">)</span><span class="symbol">: </span><a href="../-bin-update/index.html"><span class="identifier">BinUpdate</span></a><span class="symbol">&lt;</span><span class="identifier">JSON</span><span class="symbol">&gt;</span></code>
+<p>Using the UPDATE API, you can Update Public and Private bins.</p>
+<h3>Parameters</h3>
+<p><a name="binId"></a>
+<code>binId</code> - String</p>
+<p><a name="data"></a>
+<code>data</code> - JSON (Any class with @Serializable annotated)</p>
+<p><a name="versioning"></a>
+<code>versioning</code> - Boolean (Required only if you want to disable versioning on private records)</p>
+<p><a name="secretKey"></a>
+<code>secretKey</code> - String? (Required only if you are trying to update a private record)</p>
+<p><strong>Return</strong><br/>
+<a href="../-bin-update/index.html">BinUpdate</a>&lt;<a href="update.html#JSON">JSON</a>&gt;</p>
+</BODY>
+</HTML>
