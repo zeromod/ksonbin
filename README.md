@@ -45,12 +45,12 @@ Ksonbin.init(secretKey = "YOUR_KEY_HERE")
 
 ```kotlin
 fun main() {
-	Ksonbin.init("YOUR_API_KEY_HERE")
- 
-	val newBin: BinCreate<Chat> = Ksonbin.bin.create(Chat("Hi"))
+    Ksonbin.init("YOUR_API_KEY_HERE")
+    
+    val newBin: BinCreate<Chat> = Ksonbin.bin.create(Chat("Hi"))
     //BinCreate(success=true, data=Chat(message=Hi), id=5efcc1f87f16b71d48a96f91, private=true)
-
-	val chat: Chat = Ksonbin.bin.read(newBin.id)
+    
+    val chat: Chat = Ksonbin.bin.read(newBin.id)
     //Chat(message=Hi)
 }
 
