@@ -39,7 +39,7 @@ Ksonbin.init(secretKey = "YOUR_KEY_HERE")
 
 > Recommended reading this first : [Jsonbin API reference](https://jsonbin.io/api-reference) 
 
-[Ksonbin Documentation]()
+[Ksonbin Documentation](https://zeromod.in/ksonbin/)
 
 ## Quick sample
 
