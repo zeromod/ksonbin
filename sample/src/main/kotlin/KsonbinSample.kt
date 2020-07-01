@@ -5,7 +5,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 fun main() {
-    Ksonbin.init("\$2b\$10\$KcbqnBVB62yaqvfRiT39i.b4aGMhuqZP8XXywC6gvhdRwJzMZrGRy")
+    //TODO: Add jsonbin secret-key here
+    Ksonbin.init("YOUR_KEY_HERE")
     runBlocking {
         binSample()
         collectionSample()
