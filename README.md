@@ -3,7 +3,7 @@
 
 Made with [ktor](https://ktor.io/) for light dependencies and 100% kotlin :heart:
 
-## Usage (WIP)
+## Usage
 
 **Gradle**
 
@@ -13,15 +13,31 @@ Made with [ktor](https://ktor.io/) for light dependencies and 100% kotlin :heart
 
 *Kotlin DSL*
 
-​	add `kotlin("plugin.serialization") version "1.3.70"` in plugins
+```kotlin
+ plugins {
+ 	kotlin("plugin.serialization") version "1.3.70"
+ }
+```
 
-​	add `implementation("in.zeromod:ksonbin:1.0")` in dependencies
+```kotlin
+dependency {
+	implementation("in.zeromod:ksonbin:1.0")
+}
+```
 
 *Groovy DSL*
 
-​	add `id 'org.jetbrains.kotlin.plugin.serialization' version '1.3.70'` in plugins
+```kotlin
+plugins {
+ 	id 'org.jetbrains.kotlin.plugin.serialization' version '1.3.70'
+}
+```
 
-​	add `implementation "in.zeromod:ksonbin:1.0"` in dependencies
+```kotlin
+dependency {
+	implementation "in.zeromod:ksonbin:1.0"
+}
+```
 
 ###  Init
 
