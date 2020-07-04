@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "in.zeromod"
-version = "1.0"
+version = "1.0-alpha"
 
 repositories {
     jcenter()
