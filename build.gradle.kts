@@ -3,10 +3,8 @@ plugins {
     id("maven-publish")
     kotlin("plugin.serialization") version "1.3.72"
     id("org.jetbrains.dokka") version "0.10.1"
+    id("com.vanniktech.maven.publish") version "0.11.1"
 }
-
-group = "in.zeromod"
-version = "1.0-alpha"
 
 repositories {
     jcenter()
@@ -14,20 +12,12 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
+    api(kotlin("stdlib-jdk8"))
 
     val ktor = "1.3.2"
     api("io.ktor:ktor-client-cio:$ktor")
     api("io.ktor:ktor-client-json-jvm:$ktor")
     api("io.ktor:ktor-client-serialization-jvm:$ktor")
-}
-publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            artifactId = "ksonbin"
-            from(components["java"])
-        }
-    }
 }
 
 tasks {
