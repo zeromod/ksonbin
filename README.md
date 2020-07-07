@@ -15,13 +15,13 @@ Made with [ktor](https://ktor.io/) for light dependencies and 100% kotlin :heart
 
 ```kotlin
  plugins {
- 	kotlin("plugin.serialization") version "1.3.70"
+    kotlin("plugin.serialization") version "1.3.70"
  }
 ```
 
 ```kotlin
 dependency {
-	implementation("in.zeromod:ksonbin:1.0")
+    implementation("in.zeromod:ksonbin:1.0")
 }
 ```
 
@@ -29,13 +29,13 @@ dependency {
 
 ```kotlin
 plugins {
- 	id 'org.jetbrains.kotlin.plugin.serialization' version '1.3.70'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.3.70'
 }
 ```
 
 ```kotlin
 dependency {
-	implementation "in.zeromod:ksonbin:1.0"
+    implementation "in.zeromod:ksonbin:1.0"
 }
 ```
 
@@ -79,6 +79,8 @@ data class Chat(
 > More samples at [KsonbinSample.kt](https://github.com/zeromod/ksonbin/blob/master/sample/src/main/kotlin/KsonbinSample.kt)
 
 ### Android Usage
+
+Due an issue in `kotlinx.serialization`, we need some modifications here. Hopefully will be fixed soon by [commit](https://github.com/Kotlin/kotlinx.serialization/commit/62c6a7c43fbd4dc693d519dfa24d90bb95140ad1)
 
 For adding this library to android, add the below line in build.gradle (app- level) `android` block
 
