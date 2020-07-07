@@ -77,3 +77,18 @@ data class Chat(
 ```
 
 > More samples at [KsonbinSample.kt](https://github.com/zeromod/ksonbin/blob/master/sample/src/main/kotlin/KsonbinSample.kt)
+
+### Android Usage
+
+For adding this library to android, add the below line in build.gradle (app- level) `android` block
+
+```groovy
+android {
+	//other configs
+	
+	packagingOptions {
+        exclude 'META-INF/*.kotlin_module'
+	}
+}
+```
+
