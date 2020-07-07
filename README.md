@@ -84,11 +84,11 @@ For adding this library to android, add the below line in build.gradle (app- lev
 
 ```groovy
 android {
-	//other configs
+    //other configs
 	
-	packagingOptions {
+    packagingOptions {
         exclude 'META-INF/*.kotlin_module'
-	}
+    }
 }
 ```
 
